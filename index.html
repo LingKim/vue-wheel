@@ -29,9 +29,17 @@
 </head>
 <body>
 <div id="app">
-    <g-button icon="setting" icon-position="right">确定</g-button>
-    <g-button icon="download">你好</g-button>
-    <g-button icon="loading">取消</g-button>
+    <div style="display: none">
+        <g-button icon="setting" icon-position="right" :loading=loading1>确定</g-button>
+        <g-button icon="download">你好</g-button>
+        <g-button :loading=loading1 @click="loading1 = !loading1">取消</g-button>
+        <g-button-group>
+            <g-button icon="left">上一页</g-button>
+            <g-button icon="right" icon-position="right">下一页</g-button>
+        </g-button-group>
+    </div>
+
+    <g-input></g-input>
 </div>
 </body>
 <script src="./src/app.js"></script>
