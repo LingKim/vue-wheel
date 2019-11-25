@@ -15,5 +15,13 @@ new Vue({
   	return {
 		  loading1:true
 	  }
+	},
+	methods: {
+		handle(e) {
+			console.log(e.target.value);
+		},
+		handleInput() {
+			console.log(1);
+		}
 	}
 });
