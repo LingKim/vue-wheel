@@ -37,12 +37,17 @@
             <g-button icon="left">上一页</g-button>
             <g-button icon="right" icon-position="right">下一页</g-button>
         </g-button-group>
+        <g-input value="利好" @change="handle"></g-input>
+        <g-input value="利好" disabled></g-input>
+        <g-input value="利好" readonly></g-input>
+        <g-input value="大家" v-model="message" error="错啦"></g-input>
+        {{message}}
     </div>
 
-    <g-input value="利好" @change="handle"></g-input>
-    <g-input value="利好" disabled></g-input>
-    <g-input value="利好" readonly></g-input>
-    <g-input value="大家" @input="handleInput" error="错啦"></g-input>
+    <g-row gutter="20">
+        <g-col span="12">1</g-col>
+        <g-col span="12">1</g-col>
+    </g-row>
 
 </div>
 </body>
