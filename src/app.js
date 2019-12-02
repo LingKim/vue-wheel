@@ -49,8 +49,14 @@ new Vue({
 			this.$toast('玩蛋');
 		},
 		clickMe() {
-			console.log(11);
-			this.$toast('出来吧');
+			this.$toast('出来吧',{
+				closeButton: {
+					text:"关闭",
+					callback() {
+						console.log('明白了');
+					}
+				}
+			});
 		}
 	}
 });
