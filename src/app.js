@@ -10,6 +10,8 @@ import Header from './header'
 import Footer from './footer'
 import Sider from './sider'
 import Content from './content'
+import Toast from './toast'
+import plugin from './plugins'
 
 Vue.component('g-button',Button);
 Vue.component('g-icon',Icon);
@@ -22,6 +24,8 @@ Vue.component('g-header',Header);
 Vue.component('g-footer', Footer);
 Vue.component('g-sider', Sider);
 Vue.component('g-content', Content);
+Vue.component('g-toast', Toast);
+Vue.use(plugin);
 
 new Vue({
   el:'#app',
@@ -31,12 +35,22 @@ new Vue({
 		  message:''
 	  }
 	},
+	mounted() {
+  //	this.showToast();
+	},
 	methods: {
 		handle(e) {
 			console.log(e.target.value);
 		},
 		handleInput() {
 			console.log(1);
+		},
+		showToast(){
+			this.$toast('玩蛋');
+		},
+		clickMe() {
+			console.log(11);
+			this.$toast('出来吧');
 		}
 	}
 });

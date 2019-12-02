@@ -27,7 +27,7 @@
 <style lang="scss" scoped>
     .layout {
         flex-grow: 1;
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         display: flex;
         flex-direction: column;
         &.hasSider {
