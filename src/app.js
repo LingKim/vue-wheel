@@ -36,7 +36,7 @@ new Vue({
 	  }
 	},
 	mounted() {
-  //	this.showToast();
+  	//this.showToast();
 	},
 	methods: {
 		handle(e) {
@@ -49,14 +49,17 @@ new Vue({
 			this.$toast('玩蛋');
 		},
 		clickMe() {
-			this.$toast('出来吧',{
+			this.$toast(`你的智商目前为 ${parseInt(Math.random() * 100)}。你的智商需要充值！`, {
+				position:"top",
+				enableHtml: false,
 				closeButton: {
-					text:"关闭",
-					callback() {
-						console.log('明白了');
+					text: '已充值',
+					callback () {
+						console.log('他说已经充值智商了')
 					}
-				}
-			});
+				},
+				autoClose: 3,
+			})
 		}
 	}
 });
